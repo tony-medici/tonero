@@ -33,10 +33,14 @@ def guess_game
     #Iteration which loops until the "guess_limit" is exhausted, based on difficulty level
     while guess_count < guess_limit
         #User guess input
-        guess = gets.chomp.to_i
+        guess = gets.chomp
+
+        if guess.class == String or guess.class == Float 
+            puts "Please enter a valid number \n"
+        end
 
         #Condition to determine if user is correct or wrong
-        if guess == random_number
+        if guess.to_i == random_number
             puts "You got it right!"
             break
         else
