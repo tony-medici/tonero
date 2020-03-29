@@ -35,6 +35,7 @@ def guess_game
         #User guess input
         guess = gets.chomp
 
+        #A conditional statement that checks if the user inputted a valid number
         if guess.class == String or guess.class == Float 
             puts "Please enter a valid number \n"
         end
